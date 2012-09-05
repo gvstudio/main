@@ -1,0 +1,23 @@
+<?php
+$con = count($this->content);
+
+?>
+<h2>Расписание</h2>
+<ul class="halls">
+	<?php for($i;$i<$con;$i++) { ?>
+			<li class="tabs_plus_li" id="tabs<?php echo $i+1;?>">Зал <?php echo $i+1;?></li>
+	<?php }?>
+</ul>
+<?php $i=1; foreach($this->content as $value){ ?>		
+	<div class="hall" id="id_<?php echo $i;?>">	
+		<div class="tabs-4" >
+			<?php echo $value->prev_week; ?>
+		</div>
+		<div class="tabs-4">
+			<?php echo $value->curr_week; ?>
+		</div>
+		<div class="tabs-4" >
+			<?php echo $value->next_week; ?>
+		</div>
+	</div>
+<?php $i++; } ?>

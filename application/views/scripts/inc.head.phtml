@@ -1,0 +1,45 @@
+<base href="<?php echo $_SERVER['SCRIPT_NAME']; ?>" />
+<?php
+$this->headLink()->appendStylesheet('/design/css/style.css')
+        ->appendStylesheet('/design/css/jquery.fancybox.css');
+
+
+$this->headScript()->appendFile('/design/js/jquery-1.7.2.min.js')
+		->appendFile('/design/js/cufon-yui.js')
+		->appendFile('/design/js/jquery.fancybox.pack.js') 
+		->appendFile('/design/js/jquery.bxSlider.js') 
+		->appendFile('/design/js/spoiler.js')       
+		->appendFile('/design/js/custom.js')
+		->appendFile('/design/js/Myriad_Pro_700.font.js');
+		
+
+echo $this->headMeta();
+echo $this->headTitle();
+echo $this->headLink();
+echo $this->headStyle();
+echo $this->headScript();
+?>
+<!--[if IE 7]>
+			<link rel="stylesheet" href="/design/css/style_ie7.css" type="text/css" media="screen, projection" />
+<![endif]-->
+<!--[if IE 8]>
+			<link rel="stylesheet" href="/design/css/style_ie8.css" type="text/css" media="screen, projection" />
+<![endif]-->
+      
+<!--[if IE 7]>
+		 <script type="text/javascript" >      
+                    $(function(){
+                    $("a").focus(function(){
+                            this.blur();
+                      });
+                    });
+            </script>    
+<![endif]-->
+<script type="text/javascript">
+			$(function(){
+
+				    $("a").focus(function(){
+                           			 this.blur();
+						}); 
+			});
+		</script>

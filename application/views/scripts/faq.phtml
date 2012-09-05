@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php echo $this->partial('inc.head.phtml'); ?>
+    </head>
+    <body>
+        <section id="body">
+		<header>
+				 <?php echo $this->partial('inc.header.phtml'); ?>			
+		</header>			
+		<div class="clear">&nbsp;</div>
+		<section id="content">
+			<div class="wrapper">				
+				<aside id="left-col">					
+					<nav>
+						<p>Наши услуги:</p>
+						<?php echo $this->action('show', 'index', 'menu', array('menuId' => 4) ); ?>
+					</nav>
+				</aside>
+				<section id="right-col">
+					<?php echo $this->layout()->content; ?>
+				</section>
+				<div class="clear">&nbsp;</div>						
+			</div>				
+		</section><!--/content-->
+
+	<div class="clear">&nbsp;</div>
+	<div id="rasporka"></div>
+
+	</section><!--/body-wrapper-->
+	<div id="footer">
+		<?php echo $this->partial('inc.footer.phtml'); ?>
+	</div>
+
+				
+	</body>
+</html>

@@ -1,0 +1,14 @@
+<article class="info2">
+    <div class="img">
+	<?php if (!empty($this->article->picture)) { ?>
+    	<img src="<?php echo $this->article->picture; ?>" alt="">
+	<?php } ?>
+    </div>
+    <h3><?php echo $this->article->name; ?></h3>
+    <p></p><?php echo date('d/m/Y', $this->article->date); ?></p>
+   
+	<?php echo $this->article->content; ?>
+    
+
+    <a class="back" href="<?php echo Rastor_Url::get('articles'); ?>">&laquo;&nbsp;Назад</a>
+</article>

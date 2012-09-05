@@ -1,0 +1,11 @@
+﻿.header_content .header_contacts {height:42px; padding-top:0; margin:25px -100px 70px 0; }
+.block2 .more {cursor:pointer; background:url(../i/more.png) right top no-repeat; height:26px; text-align:right; padding-right:35px;}
+.block2 .more a {font:bold 13px Arial; color:#666;}
+.block2 .more:hover a {text-decoration: none;}
+.block2 .more:hover {background:url(../i/more_active.png) right top no-repeat; }
+
+.block1 .more {cursor:pointer; background:url(../i/more.png) right top no-repeat; height:26px; text-align:right; padding-right:35px;}
+.block1 .more a {font:bold 13px Arial; color:#666;}
+.block1 .more:hover a {text-decoration: none;}
+.block1 .more:hover {background:url(../i/more_active.png) right top no-repeat; }
+#content_block .filial .district{ padding-bottom: 0;}

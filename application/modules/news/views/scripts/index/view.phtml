@@ -1,0 +1,12 @@
+<h3><?php echo $this->article->name; ?></h3>
+<p class="press_data"><?php echo date('d/m/Y', $this->article->date); ?></p>
+	<div class="press_text">
+		<?php if (!empty($this->article->thumb)) { ?>
+    			<img src="<?php echo $this->article->thumb; ?>" alt="">
+		<?php } ?>
+	
+		<?php echo $this->article->content; ?>
+	</div>
+
+<div class="back"><p><a href="<?php echo Rastor_Url::get('news'); ?>">&lt;&lt;&nbsp;&nbsp;Назад</a></p></div>
+

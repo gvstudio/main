@@ -1,0 +1,27 @@
+<h2>Фотогалерея</h2>
+<div class="foto_albom">
+<ul >
+	<?php foreach ($this->paginator as $gallery) { ?>
+		
+		<li>
+			<a class="fancybox" rel="gallery" href="<?php echo $gallery->picture; ?>">
+				<?php if (!empty($gallery->thumb)) { ?>
+					<img src="<?php echo $gallery->thumb; ?>" alt="" />
+				<?php } ?>
+				<?php echo $gallery->name; ?>
+				
+			</a>
+		</li>		
+	
+		
+	<?php } ?>
+	
+</ul>
+</div>
+<div class="clear"></div>
+<div class="back"><p><a href="<?php echo Rastor_Url::get('gallery'); ?>">&laquo;&nbsp;Назад</a></p></div>
+<div class="pagenator_foto">
+	
+		<?php echo $this->paginator; ?>
+	
+</div>

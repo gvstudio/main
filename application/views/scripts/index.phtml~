@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php echo $this->partial('inc.head.phtml'); ?>
+    </head>
+    <body>
+        <section id="body">
+		<header>
+				<div class="wrapper">
+			<a id="logo" href="/" title="Dentamir"></a>
+			<div id="address">
+				<ul>
+					<li><span>Адрес:</span>&nbsp;Москва, ул. Б.Переяславская, д.10</li>
+					<li><span>Телефон:</span>&nbsp;+3 /044/ 568 25 87,   568 25 82</li>
+				</ul>
+				<ul>
+					<li><span>График работы:</span>&nbsp;Понедельник-Пятница 10:00 - 21:00,</li>
+					<li>Суббота-Воскресение 11:00 - 18:00</li>
+				</ul>					
+			</div>
+			<nav>
+						<?php echo $this->action('show', 'index', 'menu', array('menuId' => 1)); ?>
+			</nav>		
+				
+		</div>
+
+		</header>
+
+
+		<div id="saleMain">
+			<div class="wrapper">
+				<div id="sale">
+					<img src="design/img/gift.png" alt="Sale!">
+					<p><span>Cкидка выходного дня!!</span> Всем посетителям нашей клиники предлагается воспользоваться  скидкой в 7 % на все виды услуг! Скидка действует только в выходные дни (суббота и воскресенье).</p>
+				</div>
+				<div class="clear">&nbsp;</div>
+			</div>
+		</div>
+		<div class="slider">
+			<div class="wrapper">
+				<div class="left">		
+					<ul id="slider">
+						<li><img src="/design/img/slide1.jpg" alt=""></li>
+						<li><img src="/design/img/slide1.jpg" alt=""></li>
+						<li><img src="/design/img/slide1.jpg" alt=""></li>
+						<li><img src="/design/img/slide1.jpg" alt=""></li>
+					</ul>					
+				</div>
+				<div class="right">
+					<div class="slogan">
+						<input type="submit" class="details" value="подробнее о нас">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clear">&nbsp;</div>
+
+		<section id="content">
+			<div class="wrapper">				
+				<aside id="left-col">					
+					<nav>
+						<p>Наши услуги:</p>
+						<?php echo $this->action('show', 'index', 'menu', array('menuId' => 4) ); ?>
+						<?php //echo $this->menu->navigation()->sitemap(); ?>
+					</nav>
+				</aside>
+				<section id="right-col">
+					<?php echo $this->action('benefits', 'index', 'content', array('uri' =>'dobro_pojalovat') ); ?>					
+				</section>
+				<div class="clear">&nbsp;</div>
+				<div id="benefits">
+					<?php echo $this->action('benefits', 'index', 'content', array('uri' =>'nashi_preimuschestva') ); ?>
+				</div>						
+			</div>				
+		</section><!--/content-->
+
+	<div class="clear">&nbsp;</div>
+	<div id="rasporka"></div>
+
+	</section><!--/body-wrapper-->
+	<footer>
+		<?php echo $this->partial('inc.footer.phtml'); ?>
+	</footer>
+    </body>
+</html>
+
+
+
+

@@ -1,0 +1,10 @@
+
+	<div class="wrapper">
+		<a id="logoFooter" href="/" title="Dentamir"></a>
+		<nav>
+			<?php echo $this->action('show', 'index', 'menu'); ?>
+			</nav>
+		<div id="copyright"> 
+		      	<a href="http://globalvision.com.ua/" target="_blank">Создание сайта</a> &copy; Global Vision
+		</div>
+	</div>

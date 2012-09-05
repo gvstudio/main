@@ -1,0 +1,14 @@
+<?php
+
+class Menu_IndexController extends Rastor_Controller_Action {
+
+    public function showAction() {
+	$view = $this->getResource('layout');
+        $menuModel = new Menu_Model_MenuItem();
+        $my = new Zend_Navigation($menuModel->getNavigationArray($this->view->url(), $this->_getLocale()->getLanguage()));
+        $this->view->menu = new Zend_Navigation($menuModel->getNavigationArray($this->view->url(), $this->_getLocale()->getLanguage()));
+	$view->navigation($my);
+    }
+
+}
+

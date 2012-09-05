@@ -1,0 +1,17 @@
+<?php foreach ($this->paginator as $article) { ?>
+        <article class="info">
+        <?php if (!empty($article->thumb)) { ?>
+			<div class="img"><img src="<?php echo $article->thumb; ?>" alt=""></div>
+		<?php } ?>
+    		<h3><a href="<?php echo Rastor_Url::get('article', array('uri' => $article->uri)); ?>"></h3>
+    	    <h3><?php echo $article->name; ?></h3>
+    	    <p><?php echo date('d.m.Y', $article->date); ?></p></a>
+    	    
+		    <?php echo $article->smallcontent; ?>
+    
+    	<a class="more" href="<?php echo Rastor_Url::get('article', array('uri' => $article->uri)); ?>">подробнее</a>
+        </article>
+    <?php } ?>
+<nav class="paginator">
+    <?php Zend_Debug::dump($this->paginator);die; ?>
+</nav>

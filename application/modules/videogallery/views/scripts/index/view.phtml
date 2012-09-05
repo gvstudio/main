@@ -1,0 +1,11 @@
+<h2>Видео</h2>
+<h3><?php echo $this->article->name_ru;?></h3>
+<p class="press_data"><?php echo date('d/m/Y', $this->article->date); ?></p>
+<div id="video">
+	<?php echo $this->article->video_url; ?>
+</div>
+<?php echo $this->article->content_ru; ?>
+<div class="back"><p><a href="<?php echo Rastor_Url::get('vgalleries'); ?>">&laquo;&nbsp;Назад</a></p></div>
+    
+    
+ 

@@ -1,0 +1,23 @@
+<h2>Фотогалерея</h2>
+<div class="showcase gallery">
+	<?php foreach ($this->paginator as $gallery) { ?>
+		<dl>
+			<dt>
+				<a class="odd" href="<?php echo $gallery->picture; ?>">
+				<?php if (!empty($gallery->thumb)) { ?>
+					<img src="<?php// echo $gallery->thumb; ?>" alt="" />
+				<?php } ?>
+				</a>
+			</dt>
+			<?php
+				//Zend_Debug::dump($gallery); die;
+			?>
+			<dd><h4><a class="even" href="<?php// echo $gallery->picture; ?>"><?php //echo $gallery->name; ?></a></h4></dd>
+		</dl>
+	<?php } ?>
+	<div class="clear"></div>
+</div>
+<div class="paginator">
+	<?php echo $this->paginator; ?>
+</div>
+<div class="clear"></div>

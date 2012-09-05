@@ -1,0 +1,27 @@
+<h2>Фото</h2>
+<div class="stock_gallery">
+<ul>
+	<?php foreach ($this->paginator as $gallery) { ?>
+		<li class="stock_wrapper">
+           <div class="stock_description">
+           		<p>&nbsp;</p>
+           		<p><?php echo $gallery->title_ru; ?></p>
+           </div>
+           <div class="stock_img">
+           		<a href="<?php echo Rastor_Url::get('gallery_view', array('id' => $gallery->id)); ?>">
+				<?php if (!empty($gallery->thumb)) { ?>
+					<img src="<?php echo $gallery->thumb; ?>" alt="" />
+				<?php } ?>
+				</a>
+           </div>
+        </li>
+ 	<?php } ?>
+</ul>
+
+<div class="clear"></div>
+</div>
+<div class="paginator">
+	<ul>
+		<?php echo $this->paginator; ?>
+	</ul>
+</div>

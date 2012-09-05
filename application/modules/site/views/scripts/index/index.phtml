@@ -1,0 +1,21 @@
+<div id="qa-wrapper">
+						<div class="qa-content"><ul>
+<?php foreach ($this->paginator as $article) { ?>
+	
+       
+        
+       
+	  	<li><a href=""><?php echo $article->name; ?></a>
+			<ul>
+			 	<li>
+			 		<?php echo $article->content; ?>
+			 	</li>
+			 	<a class="buttonAsk" href="#">задать вопрос</a>
+			</ul>
+		  </li>
+
+        
+    <?php } ?>
+    </ul>
+    </div>
+    </div>

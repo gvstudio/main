@@ -1,0 +1,18 @@
+<?php foreach ($this->paginator as $article) { ?>
+	<div class="video_wrapper">
+		<div>
+			<h2><?php echo $article->name; ?></h2>
+			<p class="press_data"><?php echo date('d.m.Y', $article->date); ?></p>
+		</div>
+		<div class="video_descript">
+			<?php if (!empty($article->thumb)) { ?>
+			 	<img src="<?php echo $article->thumb; ?>" alt=""/>
+			<?php } ?>
+			 <?php echo $article->smallcontent; ?>
+			 <div class="stock_button"><a href="<?php echo Rastor_Url::get('article', array('uri' => $article->uri)); ?>">подробнее &gt;&gt;</a></div>
+		</div>
+	</div>	
+<?php } ?>
+<div class="pagenator_video">
+    <?php echo $this->paginator; ?>
+</div>

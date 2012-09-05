@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php echo $this->partial('inc.head.phtml'); ?>
+    </head>
+    <body>
+        <div id="conteiner">
+			<div id="header">
+				<div class="menu">
+					<?php echo $this->action('show', 'index', 'menu', array('menuId' => 1)); ?>
+				</div>
+				<div class="wrapper">
+					<div class="logo">
+						<a href="/"></a>
+					</div>
+					<div class="contact">
+						Связаться с нами:<br> 
+						<div class="ph"><span>(044)</span> 502-21-22</div>
+					</div>
+
+					<div class="clear">&nbsp;</div>
+				</div>
+			</div>	
+		
+			<div class="promo">
+				<div class="wrap">
+					<div class="slideshow">
+						<ul>
+							<li class="l1">&nbsp;</li>
+							<li class="l2">&nbsp;</li>
+							<li class="l3">&nbsp;</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="content">
+                    <!--левый блок начало-->
+					<div id="left_block">
+						<div class="category">
+							<h2>Наши программы</h2>
+								<?php echo $this->action('show', 'index', 'menu', array('menuId' => 4)); ?>
+						</div>
+						<div class="banner">
+							<?php echo $this->action('show', 'index', 'banners', array('position' => 0)); ?>
+							
+						</div>
+						
+						<div class="infoleft">							
+						</div>
+						<div class="rss">
+							<?php echo $this->action('index', 'index', 'mailer'); ?>
+						</div>
+					</div>
+                    <!--левый блок конец-->
+                    
+                    <!--правый блок начало-->
+					<div id="content_block">
+						<?php echo $this->action('mainpage', 'index', 'content', array('id' => 24)); ?>	
+						
+						<div class="infobottom">							
+						</div>
+						<div class="infobottom">							
+						</div>			
+						<div class="lastnews"></div>		
+					<div class="clear"></div>
+						<div class="banner">
+							<?php echo $this->action('show', 'index', 'banners', array('position' => 1)); ?>
+						</div>
+						
+					</div>
+					<div class="clear">&nbsp;</div>
+					<!--правый блок конец-->
+                    
+			</div><!--CONTENT-->
+		</div><!--CONTEINER-->
+        <div id="footer">
+			<?php echo $this->partial('inc.footer.phtml'); ?>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="title">Статьи</div>
+<?php foreach ($this->records as $record) { ?>
+    <div class="article">
+        <a href="<?php echo Rastor_Url::get('article', array('uri' => $record->uri)); ?>">
+            <h2><?php echo $record->name; ?></h2>
+            <?php if (!empty($record->thumb)) { ?>
+                <img src="<?php echo $record->thumb; ?>" alt="">
+            <?php } ?>
+            <span><?php echo $record->smallcontent; ?></span>
+        </a>
+        <a href="<?php echo Rastor_Url::get('article', array('uri' => $record->uri)); ?>" class="more">подробнее&nbsp;&gt;&gt;</a>
+    </div>
+<?php } ?>

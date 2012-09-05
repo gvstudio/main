@@ -1,0 +1,21 @@
+		<div class="wrapper">
+			<a id="logo" href="/" title="Dentamir"></a>
+			<div id="address">
+				<ul>
+					<li><span>Адрес:</span>&nbsp;Москва, ул. Б.Переяславская, д.10</li>
+					<li><span>Телефон:</span>&nbsp;+3 /044/ 568 25 87,   568 25 82</li>
+				</ul>
+				<ul>
+					<li><span>График работы:</span>&nbsp;Понедельник-Пятница 10:00 - 21:00,</li>
+					<li>Суббота-Воскресение 11:00 - 18:00</li>
+				</ul>					
+			</div>
+			<nav>
+						<?php echo $this->action('show', 'index', 'menu', array('menuId' => 1)); ?>
+			</nav>		
+			<div id="sale">
+					<img src="/design/img/gift.png" alt="Sale!">
+					<p><span>Cкидка выходного дня!!</span> Всем посетителям нашей клиники предлагается воспользоваться  скидкой в 7 % на все виды услуг! Скидка действует только в выходные дни (суббота и воскресенье).</p>
+			</div>		
+		</div>
+

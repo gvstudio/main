@@ -1,0 +1,9 @@
+<div class="title">Новости</div>
+<?php foreach ($this->records as $record) { ?>
+    <div class="post">
+        <h2><?php echo $record->name; ?></h2>
+        <p>
+            <a href="<?php echo Rastor_Url::get('newsview', array('id' => $record->id)); ?>"><?php echo $record->smallcontent; ?></a>
+        </p>
+    </div>
+<?php } ?>

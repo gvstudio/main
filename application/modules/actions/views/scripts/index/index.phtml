@@ -1,0 +1,16 @@
+<?php foreach ($this->paginator as $article) { ?>
+        <div class="stock_wrapper">
+        	 <div class="stock_description">
+				<p><?php echo $article->smallcontent; ?></p>
+        	</div>
+        	<div class="stock_img">
+				<?php if (!empty($article->thumb)) { ?>
+					<a href="<?php echo Rastor_Url::get('action', array('uri' => $article->uri)); ?>"><img src="<?php echo $article->thumb; ?>" alt=""></a>
+				<?php } ?>
+			</div>
+        		 <p>&nbsp;</p>
+                 <div class="stock_button"><a href="<?php echo Rastor_Url::get('action', array('uri' => $article->uri)); ?>">подробнее >></a></div>
+                 <div class="clear"></div>
+        </div>	
+        
+    <?php } ?>
