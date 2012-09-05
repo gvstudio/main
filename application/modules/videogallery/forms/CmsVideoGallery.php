@@ -64,12 +64,17 @@ class VideoGallery_Form_CmsVideoGallery extends Rastor_Form {
 
         $enable = $this->createElement('checkbox', 'enable', array('required' => false, 'label' => 'Активность'));
         $enable->addDecorator('errors', array('class' => 'error msg'));
-
+	$date = $this->createElement('text', 'date', array('label' => 'Дата'));
+        $date->addDecorator('errors', array('class' => 'error msg'))
+                ->setValue(date("d.m.Y", time()))
+                ->addValidator('Date', true, array('dd.MM.YYYY'))
+                ->setRequired(true);
 
         $this->addElements(array(
             $preview,
             $enable,
-            $userUri
+            $userUri,
+	    $date
         ));
 
         $uri = $this->createElement('hidden', 'uri', array('disableLoadDefaultDecorators' => true));
@@ -109,7 +114,7 @@ class VideoGallery_Form_CmsVideoGallery extends Rastor_Form {
             $this->addElements(array($title, $keywords, $description));
         }
 
-        $this->addDisplayGroup(array_merge($info, array('user_uri', 'preview', 'enable', 'protected')), 'info')
+        $this->addDisplayGroup(array_merge($info, array('user_uri', 'preview', 'enable', 'protected','date')), 'info')
                 ->addDisplayGroup($seo, 'seo')
                 ->setDisplayGroupDecorators(array('FormElements', 'fieldset'));
 

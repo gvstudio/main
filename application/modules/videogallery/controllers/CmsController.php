@@ -31,7 +31,7 @@ class VideoGallery_CmsController extends Rastor_Controller_Cms_ActionTable {
 
                 $preview = Zend_Json::decode($formData['preview']);
                 unset($formData['preview']);
-
+		$formData['date'] =  strtotime($formData['date']);
                 if ($this->getModel()->getDbTable()->insert($formData + $preview)) {
                     $messager = new Rastor_Controller_Cms_Messager();
                     $messager->setAction('successfully_added');
@@ -47,6 +47,7 @@ class VideoGallery_CmsController extends Rastor_Controller_Cms_ActionTable {
 
         if ($data = $this->getModel()->getDbTable()->getRecord($id)) {
             $form = new  VideoGallery_Form_CmsVideoGallery();
+	    $data->date=date('d.m.Y',$data->date); 
             $form->setValues($data);
             $form->getElement('submit')->setLabel('Изменить');
 
@@ -74,6 +75,7 @@ class VideoGallery_CmsController extends Rastor_Controller_Cms_ActionTable {
                     $formData = $form->getValues();
                     
                     $preview = Zend_Json::decode($formData['preview']);
+		    $formData['date'] =  strtotime($formData['date']);
                     unset($formData['preview']);
 			//Zend_Debug::dump($formData + $preview);die;
 			if(empty($preview)){
